@@ -7,6 +7,7 @@
   <li data-html="#media{{id}}"
       data-download-url="{{relative urls.download}}"
       data-video='{"source": [{"src": "{{relative urls.video}}", "type": "" }] }'
+      data-sub-html="{{formatFile filename}}"
     >
     <a href="{{relative urls.download}}">
       <img src="{{relative urls.thumbnail}}"
@@ -15,6 +16,7 @@
            alt="{{filename}}"/>
     </a>
     <img class="video-overlay" src="{{relative 'public/play.png'}}" />
+    <div class="caption">{{formatFile filename}}</div>
   </li>
 
 {{~else~}}
@@ -24,7 +26,7 @@
   --}}
 
   <li data-src="{{relative urls.large}}"
-      data-sub-html="{{meta.caption}}"
+      data-sub-html="{{formatFile filename}}"
       data-download-url="{{relative urls.download}}"
       data-filename="{{filename}}"
     >
@@ -37,6 +39,7 @@
     {{#if meta.animated}}
       <img class="video-overlay" src="{{relative 'public/play.png'}}" />
     {{/if}}
+    <div class="caption">{{formatFile filename}}</div>
   </li>
 
 {{~/if~}}

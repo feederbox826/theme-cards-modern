@@ -7,3 +7,14 @@
   - remove jQuery dependency
 - default enable autoplay video with videoJS
 - remove EXIF from thumbnail info
+
+# Changes from master
+- default dark theme
+- add caption box at the bottom of the image
+  - default for stripped filename
+- video playback optimizations
+  - optimize for 1x1 videos
+  - disable PiP
+  - working autoplay and loop
+- add filename stripping plugin
+- add sub-html to videos
